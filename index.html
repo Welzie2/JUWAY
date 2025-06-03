@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<video id="corner-video" autoplay loop muted playsinline>
+    <source src="1.mp4" type="video/mp4">
+</video>
+
+<body>
+    <div class="photo-gallery">
+    <h2>My pretty little babyyy loveeey 💖</h2>
+    <div class="gallery-container">
+        <!-- Photo 1 -->
+        <div class="gallery-item">
+            <img src="8.jpg" alt="Beautiful Moment 1">
+        </div>
+        <!-- Photo 2 -->
+        <div class="gallery-item">
+            <img src="3.jpg" alt="Beautiful Moment 2">
+        </div>
+        <!-- Photo 3 -->
+        <div class="gallery-item">
+            <img src="4.jpg" alt="Beautiful Moment 3">
+        </div>
+        <!-- Photo 4 -->
+        <div class="gallery-item">
+            <img src="5.jpg" alt="Beautiful Moment 4">
+        </div>
+        <!-- Add more photos as needed -->
+         <div class="gallery-item">
+            <img src="6.jpg" alt="Beautiful Moment 4">
+        </div>
+        <div class="gallery-item">
+            <img src="7.jpg" alt="Beautiful Moment 4">
+        </div>
+        <div class="gallery-item">
+            <img src="9.jpg" alt="Beautiful Moment 4">
+        </div>
+    </div>
+</div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="baby.mp3" type="audio/mp3">   </audio>
+    <div class="main-container">
+        <div class="photo-section">
+            <img src="cutiee.jpg" alt="Her beautiful smile">
+            <h1>I Love You</h1>
+            <p>Click the folders below to read my little love notes 💌</p>
+        </div>
+
+        <div class="folders">
+            <div class="folder" onclick="openNote(1)">
+                📁 Note 1
+            </div>
+            <div class="folder" onclick="openNote(2)">
+                📁 Note 2
+            </div>
+            <div class="folder" onclick="openNote(3)">
+                📁 Note 3
+            </div>
+        </div>
+
+        <!-- Hidden notes with cute animations -->
+        <div id="note1" class="note">
+            <div class="heart-animation" id="heart1">❤️</div>
+            <h2>Note 1</h2>
+            <p>“Every day I spend loving you feels like a day well lived. You’ve become the softest part of my heart, and no matter where life takes us, I’ll keep choosing you, over and over again.”
+
+</p>
+        </div>
+
+        <div id="note2" class="note">
+            <div class="heart-animation" id="heart2">❤️</div>
+            <h2>Note 2</h2>
+            <p>“You are my calm in chaos, my light in dark moments, and my favorite reason to smile. I love you deeply not just for who you are, but for how you make me feel so alive just by being near bisag layoo taa.”
+
+</p>
+        </div>
+
+        <div id="note3" class="note">
+            <div class="heart-animation" id="heart3">❤️</div>
+            <h2>Note 3</h2>
+            <p>“No words will ever be enough, but I’ll still keep trying to show you through every message, every moment, every little thing that I love you more than you’ll ever fully know.”
+
+</p>
+        </div>
+    </div>
+
+    <script>
+        const music = document.getElementById('background-music');
+        music.volume = 0.2;
+        function openNote(id) {
+            // Show the note with a cute animation
+            const note = document.getElementById(`note${id}`);
+            const heart = document.getElementById(`heart${id}`);
+            
+            note.classList.toggle('show');
+            heart.classList.toggle('show-heart');
+        }
+    </script>
+</body>
+</html>

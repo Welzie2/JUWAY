@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #ffe4e9, #fff0f5);
+    color: #333;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Floating hearts background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://i.imgur.com/G9bDaPH.png'); /* Tiny soft heart pattern */
+    background-repeat: repeat;
+    background-size: 80px;
+    opacity: 0.07;
+    z-index: -1;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.4);
+}
+
+.photo-section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffb6c1;
+    margin-bottom: 20px;
+}
+
+.photo-section h1 {
+    font-size: 2.5rem;
+    color: #ff4d6d;
+    text-shadow: 1px 1px #ffe4e1;
+}
+
+.photo-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.folders {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.folder {
+    background-color: #ffe4e1;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.folder:hover {
+    background-color: #ffccd5;
+    transform: scale(1.05);
+}
+
+.note {
+    background-color: #fff;
+    border-left: 6px solid #ff4d6d;
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.note.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heart-animation {
+    font-size: 3rem;
+    color: #ff4d6d;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.heart-animation.show-heart {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+#corner-video {
+    position: static;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: 0.8;
+    pointer-events: none; /* So it doesn't block clicks */
+    object-fit: cover;
+}
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Keeps images in a single line */
+    overflow-x: auto; /* Allows scrolling if images overflow */
+    padding: 0 10px;
+}
+
+.gallery-item img {
+    width: 150px; /* smaller size */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #ffb6c1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
